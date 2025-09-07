@@ -42,7 +42,7 @@ The analysis provides a comprehensive overview of the customer base. Sample outp
 ## 🖼Dashboard Preview
 Here is a screenshot of the Customer Behavior Analysis project:
 
-![Dashboard Preview](https://github.com/sahil-analytics/bike-data-analysis/blob/main/Dashboard.png)
+![Dashboard Preview](https://github.com/sahil-analytics/big-data-analysis-pyspark/blob/main/screenshots/1_terminal_output_results.png)
 
 
 **Key Findings:**
