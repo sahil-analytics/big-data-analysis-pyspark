@@ -2,7 +2,6 @@ FROM jupyter/pyspark-notebook:latest
 
 USER root
 
-# Install additional packages
 RUN pip install --no-cache-dir \
     matplotlib \
     seaborn \
