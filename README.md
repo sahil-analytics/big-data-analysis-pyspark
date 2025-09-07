@@ -64,15 +64,19 @@ Here is a screenshot of the Customer Behavior Analysis project:
 
 ### 2. Install Dependencies
 It's recommended to use a virtual environment.
+   ```
 
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+   ```
 
 ### 3. Run the PySpark Script
 Use spark-submit to run the analysis script. Adjust the driver memory or executor cores as needed for your environment.
+   ```
 
 spark-submit customer_analysis.py
+   ```
 
 ### Spark Performance & Monitoring
 The script is designed to run efficiently on a distributed cluster. The Spark UI provides insights into job execution, task distribution, and resource utilization.
