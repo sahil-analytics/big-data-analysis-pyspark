@@ -1,14 +1,10 @@
 """
 Big Data Analysis with PySpark: Customer Behavior Analytics
 ============================================================
-This project analyzes large-scale e-commerce customer data to identify 
-purchasing patterns, customer segmentation, and behavior trends using 
-distributed computing with PySpark.
+This project analyzes large-scale e-commerce customer data to identify purchasing patterns, customer segmentation, and behavior trends using distributed computing with PySpark.
 """
 
-# ========================
 # 1. SETUP AND IMPORTS
-# ========================
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import (
@@ -48,9 +44,7 @@ spark.sparkContext.setLogLevel("ERROR")
 print("Spark Session initialized successfully")
 print(f"Spark Version: {spark.version}")
 
-# ========================
 # 2. DATA GENERATION
-# ========================
 
 def generate_customer_data(spark, num_customers=1000000, num_transactions=5000000):
     """
@@ -119,9 +113,7 @@ transactions_df.cache()
 
 print(f"Data generated: {customers_df.count():,} customers, {transactions_df.count():,} transactions")
 
-# ========================
 # 3. DATA EXPLORATION
-# ========================
 
 print("\n" + "="*50)
 print("DATA EXPLORATION")
@@ -143,9 +135,7 @@ transactions_df.select(
     stddev("amount").alias("stddev_amount")
 ).show()
 
-# ========================
 # 4. DATA WRANGLING & FEATURE ENGINEERING
-# ========================
 
 print("\n" + "="*50)
 print("DATA WRANGLING & FEATURE ENGINEERING")
@@ -208,9 +198,7 @@ customer_full.select(
     "avg_transaction_value", "recency_days"
 ).show(5)
 
-# ========================
 # 5. CUSTOMER SEGMENTATION (RFM ANALYSIS)
-# ========================
 
 print("\n" + "="*50)
 print("CUSTOMER SEGMENTATION - RFM ANALYSIS")
@@ -274,9 +262,7 @@ segment_dist = customer_rfm.groupBy("customer_segment") \
 
 segment_dist.show()
 
-# ========================
 # 6. MACHINE LEARNING - K-MEANS CLUSTERING
-# ========================
 
 print("\n" + "="*50)
 print("MACHINE LEARNING - CUSTOMER CLUSTERING")
@@ -351,9 +337,7 @@ cluster_analysis = clustered_customers.groupBy("cluster") \
 
 cluster_analysis.show()
 
-# ========================
 # 7. BEHAVIORAL PATTERNS ANALYSIS
-# ========================
 
 print("\n" + "="*50)
 print("BEHAVIORAL PATTERNS ANALYSIS")
@@ -393,9 +377,7 @@ payment_analysis = transactions_df.groupBy("payment_method") \
 
 payment_analysis.show()
 
-# ========================
 # 8. COHORT ANALYSIS
-# ========================
 
 print("\n" + "="*50)
 print("COHORT ANALYSIS")
@@ -428,9 +410,7 @@ cohort_metrics = cohort_transactions.groupBy("cohort_month") \
 print("\nCohort Performance (Sample):")
 cohort_metrics.show(10)
 
-# ========================
 # 9. CHURN PREDICTION INDICATORS
-# ========================
 
 print("\n" + "="*50)
 print("CHURN RISK INDICATORS")
@@ -468,9 +448,7 @@ at_risk_valuable = churners.filter(
 print(f"Number of high-value customers at risk: {at_risk_valuable.count()}")
 at_risk_valuable.show(5)
 
-# ========================
 # 10. RECOMMENDATIONS & INSIGHTS
-# ========================
 
 print("\n" + "="*50)
 print("KEY INSIGHTS & RECOMMENDATIONS")
@@ -516,9 +494,7 @@ RECOMMENDATIONS:
 5. Focus on reactivating dormant customers with special promotions
 """)
 
-# ========================
 # 11. PERFORMANCE OPTIMIZATION METRICS
-# ========================
 
 print("\n" + "="*50)
 print("DISTRIBUTED COMPUTING PERFORMANCE")
@@ -540,9 +516,7 @@ complex_query.explain(True)
 print(f"\nDataFrame Partitions: {transactions_df.rdd.getNumPartitions()}")
 print(f"Cluster Cores Available: {spark.sparkContext.defaultParallelism}")
 
-# ========================
 # 12. DATA EXPORT & CLEANUP
-# ========================
 
 print("\n" + "="*50)
 print("SAVING RESULTS")
@@ -570,4 +544,3 @@ spark.stop()
 print("\n" + "="*50)
 print("PROJECT COMPLETED SUCCESSFULLY")
 print("="*50)
-
