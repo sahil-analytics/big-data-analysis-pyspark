@@ -1,4 +1,3 @@
-# spark_config.py
 from pyspark.sql import SparkSession
 
 def create_spark_session(app_name="CustomerAnalysis", memory="4g"):
