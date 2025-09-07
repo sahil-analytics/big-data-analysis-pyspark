@@ -1,4 +1,3 @@
-# Dockerfile
 FROM jupyter/pyspark-notebook:latest
 
 USER root
@@ -10,7 +9,6 @@ RUN pip install --no-cache-dir \
     numpy \
     pandas
 
-# Copy project files
 COPY customer_analysis.py /home/jovyan/work/
 COPY spark_config.py /home/jovyan/work/
 
