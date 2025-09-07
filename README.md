@@ -39,8 +39,8 @@ This project performs large-scale analysis of e-commerce customer data to uncove
 
 The analysis provides a comprehensive overview of the customer base. Sample outputs include customer segmentation and churn risk.  
 
-## 🖼Dashboard Preview
-Here is a screenshot of the Customer Behavior Analysis project:
+## 🖼Output Preview
+Here is a screenshot of the output console of Customer Behavior Analysis project:
 
 ![Dashboard Preview](https://github.com/sahil-analytics/big-data-analysis-pyspark/blob/main/screenshots/1_terminal_output_results.png)
 
@@ -53,42 +53,7 @@ Here is a screenshot of the Customer Behavior Analysis project:
 
 ---
 
-## 🏃 Running the Project
 
-### Prerequisites
-
-- Java 8/11  
-- Apache Spark 3.x  
-- Python 3.7+  
-
-
-### 2. Install Dependencies
-It's recommended to use a virtual environment.
-   ```
-
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-   ```
-
-### 3. Run the PySpark Script
-Use spark-submit to run the analysis script. Adjust the driver memory or executor cores as needed for your environment.
-   ```
-
-spark-submit customer_analysis.py
-   ```
-
-### Spark Performance & Monitoring
-The script is designed to run efficiently on a distributed cluster. The Spark UI provides insights into job execution, task distribution, and resource utilization.
-
-## Spark Jobs UI
-The Jobs tab shows the high-level Spark jobs triggered by the PySpark script. Each job corresponds to an action in the code.
-
-## Stages UI
-Each job is broken down into stages. This view is useful for identifying performance bottlenecks in the execution plan.
-
-## Executors UI
-This view shows the distribution of tasks and storage across the cluster's worker nodes (executors).
-
-> 💡 **This project was created to demonstrate end-to-end data analysis and engineering using distributed computing with PySpark.**
+## ✅Conclusion
+This project was created to demonstrate end-to-end data analysis and engineering using distributed computing with PySpark.
 
